@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="25" height="14" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="38">
+ <imagelayer id="2" name="Restaurant">
+  <image source="Inrestaurant.png" width="800" height="450"/>
+ </imagelayer>
+ <objectgroup id="3" name="Tile_Wall_Inretaurant">
+  <object id="3" x="127" y="0.5" width="65.5" height="31"/>
+  <object id="6" x="191" y="0" width="616" height="102"/>
+  <object id="7" x="735" y="104" width="70" height="348"/>
+  <object id="8" x="276" y="397" width="463" height="54"/>
+  <object id="9" x="254" y="368" width="35.6364" height="82"/>
+  <object id="10" x="47.75" y="352" width="127.75" height="98.5"/>
+  <object id="11" x="175.75" y="399.75" width="78.5" height="50.25"/>
+  <object id="12" x="-2.66667" y="-1.33333" width="66.6667" height="452"/>
+  <object id="13" x="64" y="-1.33333" width="64.6667" height="95.3333"/>
+  <object id="14" x="257.667" y="136.667" width="29.3333" height="24.3333"/>
+  <object id="15" x="240.667" y="173" width="64.6667" height="20.6667"/>
+  <object id="16" x="94.3333" y="284.667" width="29.3333" height="21.6667"/>
+  <object id="17" x="151.333" y="256" width="25.6667" height="22.3333"/>
+  <object id="18" x="78.3333" y="242" width="63" height="19"/>
+  <object id="19" x="76.3333" y="171" width="62.6667" height="20.3333"/>
+  <object id="20" x="96.3333" y="137" width="25.6667" height="18.6667"/>
+  <object id="21" x="348.333" y="118.667" width="34.6667" height="32.3333"/>
+  <object id="22" x="383.333" y="147.333" width="258" height="15"/>
+  <object id="23" x="640.667" y="145.333" width="32.6667" height="96"/>
+  <object id="24" x="664" y="266" width="19.3333" height="17.6667"/>
+  <object id="25" x="639" y="240.667" width="32.6667" height="24.3333"/>
+  <object id="26" x="384.5" y="242.5" width="258.5" height="35.5"/>
+  <object id="29" x="466.5" y="282" width="24.5" height="20.5"/>
+  <object id="30" x="403.5" y="283" width="24.5" height="19.5"/>
+  <object id="33" x="358" y="249.5" width="20.5" height="29.5"/>
+  <object id="34" x="693.5" y="193" width="22.5" height="22.5"/>
+  <object id="35" x="662.5" y="112" width="63" height="11.5"/>
+  <object id="36" x="575.5" y="117.75" width="65" height="30.5"/>
+  <object id="37" x="517.333" y="525.333"/>
+ </objectgroup>
+</map>
