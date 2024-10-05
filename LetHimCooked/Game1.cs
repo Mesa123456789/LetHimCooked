@@ -43,11 +43,10 @@ namespace LetHimCooked
         public RectangleF questboxRec;
         public RectangleF bagRec;
         public Texture2D bag;
-
         public static List<Food> BagList = new List<Food>();
         public static List<Food> foodList = new();
         public static List<Enemy> enemyList = new();
-        public static List<Food> CraftList = new List<Food>();
+        public static List<Sprite_> CraftList = new List<Sprite_>();
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -73,9 +72,10 @@ namespace LetHimCooked
 
         protected override void LoadContent()
         {
+            _spriteBatch = new SpriteBatch(GraphicsDevice);
             SpriteTexture = new AnimatedTexture(new Vector2(0, 0), 0, 2f, 1f);
             SpriteTexture.Load(Content, "PlayerIdel", 5, 4, 5);
-            _spriteBatch = new SpriteBatch(GraphicsDevice);
+            
             ui = Content.Load<Texture2D>("ui");
             uiHeart = Content.Load<Texture2D>("uiHeart");
             book = Content.Load<Texture2D>("book");
@@ -225,17 +225,26 @@ namespace LetHimCooked
         int mouse_state = 1;
         public void DrawUiGameplay(SpriteBatch _spriteBatch)
         {
-            foreach (Food food in BagList)
+            //foreach (Food food in BagList)
+            //{
+            //    if (IsPopUp == true)
+            //    {
+            //        for (int i = 0; i < BagList.Count; i++)
+            //        {
+            //            _spriteBatch.Draw(popup, new Vector2(635, 170), Color.White);
+            //            _spriteBatch.Draw(BagList[i].myTexture, new Vector2(653, 180), Color.White);
+            //        }
+            //        CountTime(100);
+            //    }
+            //}
+            if (IsPopUp == true)
             {
-                if (IsPopUp == true)
+                for (int i = 0; i < BagList.Count; i++)
                 {
-                    for (int i = 0; i < BagList.Count; i++)
-                    {
-                        _spriteBatch.Draw(popup, new Vector2(635, 170), Color.White);
-                        _spriteBatch.Draw(BagList[i].foodTexture, new Vector2(653, 180), Color.White);
-                    }
-                    CountTime(100);
+                    _spriteBatch.Draw(popup, new Vector2(635, 170), Color.White);
+                    _spriteBatch.Draw(BagList[i].foodTexture, new Vector2(653, 180), new Rectangle(0,0,32,32), Color.White);
                 }
+                CountTime(100);
             }
             if (openQuestUI == true)
             {
@@ -266,7 +275,8 @@ namespace LetHimCooked
                 _spriteBatch.Draw(inventory, new Vector2(123, 125), Color.White);
                 for (int i = 0; i < BagList.Count; i++)
                 {
-                    _spriteBatch.Draw(BagList[i].foodTexture, new Vector2(153 + i * 53, 156), Color.White);
+                    _spriteBatch.Draw(BagList[i].myTexture
+                        , new Vector2(153 + i * 53, 156), Color.White);
                 }
                 if (closeXBox == false)
                 {

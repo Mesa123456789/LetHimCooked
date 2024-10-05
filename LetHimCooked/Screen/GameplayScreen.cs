@@ -47,7 +47,7 @@ namespace LetHimCooked.Screen
         Vector2 playerPos;// = new Vector2(player.Bounds.Position.X, player.Bounds.Position.Y);
         public GameplayScreen(Game1 game, EventHandler theScreenEvent ) : base(theScreenEvent)
         {
-            foodTexture = game.Content.Load<Texture2D>("chicken");
+            foodTexture = game.Content.Load<Texture2D>("crab");
             //foodTex2 = game.Content.Load<Texture2D>("enemy");
             //foodTex3 = game.Content.Load<Texture2D>("enemy2");
             //foodTex4 = game.Content.Load<Texture2D>("flower");
@@ -76,7 +76,7 @@ namespace LetHimCooked.Screen
 
             SpriteTexture = new AnimatedTexture(new Vector2(16, 16), 0, 2f,1f);
             SpriteTexture.Load(game.Content, "Player-Sheet", 5,4,10);
-            player = new Player(SpriteTexture, playerPos, game, Bounds);
+            player = new Player(SpriteTexture, playerPos, Bounds);
             player.Load(game.Content,"Sword");
             player.Load(game.Content, "Effect");
             //Load the background texture for the screen
@@ -102,8 +102,6 @@ namespace LetHimCooked.Screen
             foreach (IEntity entity in _entities)
             {
                 _collisionComponent.Insert(entity);
-
-
             }
             this.game = game;
         }

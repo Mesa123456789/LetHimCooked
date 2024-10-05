@@ -15,7 +15,7 @@ using LetHimCooked.Screen;
 
 namespace LetHimCooked.Sprite
 {
-    public class Food : Sprite
+    public class Food : Sprite_
     {
         public Vector2 foodPosition;
         public RectangleF foodBox;
@@ -53,12 +53,12 @@ namespace LetHimCooked.Sprite
 
         public override void Draw(SpriteBatch _spriteBatch)
         {
-            _spriteBatch.Draw(foodTexture, foodPosition, Color.White);
+          // _spriteBatch.Draw(foodTexture, foodPosition, Color.White);
         }
         public virtual void OnCollision()
         {
             OntableAble = true;
-            Game1.BagList.Add(this);
+            //Game1.BagList.Add(this);
             Game1.IsPopUp = true;
             foreach (Food food in Game1.foodList)
             {

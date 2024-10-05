@@ -148,7 +148,7 @@ namespace LetHimCooked.Screen
             for (int i = 0; i < Game1.BagList.Count; i++)
             {
                 Game1.BagList[i].Update(theTime);
-                if (mouseBox.Intersects(Game1.BagList[i].foodBox) && ms.LeftButton == ButtonState.Pressed && Ontable)
+                if (mouseBox.Intersects(Game1.BagList[i].hitbox) && ms.LeftButton == ButtonState.Pressed && Ontable)
                 {
                     Game1.CraftList.Add(Game1.BagList[i]);
                     Game1.BagList.RemoveAt(i);
@@ -223,12 +223,12 @@ namespace LetHimCooked.Screen
                 {
                     for (int i = 0; i < Game1.CraftList.Count; i++)
                     {
-                        _spriteBatch.Draw(Game1.CraftList[i].foodTexture, new Vector2(240 + i * 68, 100), Color.White);
+                        _spriteBatch.Draw(Game1.CraftList[i].myTexture, new Vector2(240 + i * 68, 100), Color.White);
                     }
                 }
                 for (int i = 0; i < Game1.BagList.Count; i++)
                 {
-                    _spriteBatch.Draw(Game1.BagList[i].foodTexture, new Vector2(160 + i * 52, 250), Color.White);
+                    _spriteBatch.Draw(Game1.BagList[i].myTexture, new Vector2(160 + i * 52, 250), Color.White);
                 }
             }
 

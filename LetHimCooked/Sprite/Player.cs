@@ -14,7 +14,7 @@ using System.Xml.Linq;
 
 namespace LetHimCooked.Sprite
 {
-    public class Player : IEntity, ICollisionActor
+    public class Player : Sprite_
     {
         Enemy enemy;
         public Vector2 CharPosition;
@@ -35,20 +35,19 @@ namespace LetHimCooked.Sprite
         private readonly Game1 _game;
         public int Velocity = 4;
         public Vector2 move;
-        public IShapeF Bounds { get; }
+        
         private KeyboardState ks;
         private KeyboardState _oldKey;
         Texture2D myTexture;
         float rotation;
+        IShapeF Bounds { get; }
 
-
-        public Player(AnimatedTexture SpriteTexture, Vector2 CharPosition, Game1 game, IShapeF circleF)
+        public Player(AnimatedTexture SpriteTexture, Vector2 CharPosition, IShapeF circleF)
         {
 
             this.SpriteTexture = SpriteTexture;
             this.CharPosition = CharPosition;
             direction = Direction.Right;
-            _game = game;
             Bounds = circleF;
             SpriteTextureIdel = new AnimatedTexture(new Vector2(16,16), 0, 2f, 1f);
             
